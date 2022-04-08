@@ -19,7 +19,7 @@ public class FXMLController {
 	
 	Model model;
 	private List<Corso> corsi;
-
+	
     @FXML
     private ResourceBundle resources;
 
