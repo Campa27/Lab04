@@ -4,6 +4,7 @@ import javafx.application.Application;
 import static javafx.application.Application.launch;
 
 import it.polito.tdp.lab04.FXMLController;
+import it.polito.tdp.lab04.model.Model;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 
 public class EntryPoint extends Application {
 
-    @Override
+	@Override
     public void start(Stage stage) throws Exception {
         
     	FXMLController controller;
@@ -26,9 +27,10 @@ public class EntryPoint extends Application {
         /*
 		 * Create and set the model here!
 		 */
-		// controller.setModel();
+        Model model = new Model();
+        controller.setModel(model);
         
-        
+        scene.getRoot().setStyle("-fx-font-family: 'serif'");
         stage.setTitle("JavaFX and Maven");
         stage.setScene(scene);
         stage.show();
